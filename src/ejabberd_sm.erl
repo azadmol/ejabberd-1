@@ -594,7 +594,7 @@ do_route(From, To, #xmlel{} = Packet) ->
 	      of
 	    [] ->
 		case Name of
-		  <<"message">> -> route_message(From, To, Packet);
+		  %% <<"message">> -> route_message(From, To, Packet);
 		  <<"iq">> ->
 		      case xml:get_attr_s(<<"type">>, Attrs) of
 			<<"error">> -> ok;
